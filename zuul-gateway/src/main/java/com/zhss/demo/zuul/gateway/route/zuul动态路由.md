@@ -1,0 +1,3 @@
+首先zuul是基于spring时间发布来加载路由信息的
+如果要实现动态路由配置就需要去实现SimpleRouteLocator 和 RefreshableRouteLocator
+然后发布事务

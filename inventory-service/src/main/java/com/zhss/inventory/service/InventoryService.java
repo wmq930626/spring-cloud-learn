@@ -8,8 +8,9 @@ import com.zhss.inventory.api.InventoryApi;
 @RestController
 public class InventoryService implements InventoryApi {
 
-	public String deductStock(@PathVariable("productId") Long productId, 
-			@PathVariable("stock") Long stock) {
+	@Override
+	public String deductStock(@PathVariable("productId") Long productId,
+							  @PathVariable("stock") Long stock) {
 		System.out.println("对商品【productId=" + productId + "】扣减库存：" + stock);    
 		return "{'msg': 'success'}";
 	}
